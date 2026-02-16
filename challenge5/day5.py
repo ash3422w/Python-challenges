@@ -1,7 +1,7 @@
-full_name = "Ashok Reddy"
+full_name = input("Enter Full Name: ")  #Ashok Reddy
 L = 0
-for ch in full_name:
-    if ch != " ":
+for i in  full_name:
+    if i != " ":
         L = L + 1
 PLI =L%3
 requests = []
@@ -28,9 +28,19 @@ for value in requests:
     else:
         high_demand.append(value)
         total_valid = total_valid + 1
-applied_rule = "Rule B (Remove High Demand)"
-removed_count = len(high_demand)
-high_demand = []
+if PLI == 0:
+    removed_count = len(low_demand)
+    low_demand = []
+    applied_rule = "Rule A (Remove Low Demand)"
+elif PLI == 1:
+    removed_count = len(high_demand)
+    high_demand = []
+    applied_rule = "Rule B (Remove High Demand)"
+elif PLI == 2:
+    removed_count = len(low_demand) + len(high_demand)
+    low_demand = []
+    high_demand = []
+    applied_rule = "Rule C (Keep Only Moderate Demand)"
 print("\nFull Name:", full_name)
 print("L Value:", L)
 print("PLI Value:", PLI)
