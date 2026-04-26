@@ -9,10 +9,6 @@
 ## ⚙️ Technologies Used
 
 ![Python](https://img.shields.io/badge/PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![NumPy](https://img.shields.io/badge/NUMPY-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![Pandas](https://img.shields.io/badge/PANDAS-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![Math](https://img.shields.io/badge/MATH_MODULE-orange?style=for-the-badge)
-![Random](https://img.shields.io/badge/RANDOM_MODULE-green?style=for-the-badge)
 ![Copy](https://img.shields.io/badge/COPY_MODULE-purple?style=for-the-badge)
 
 ---
@@ -21,8 +17,6 @@
 
 ![Concept](https://img.shields.io/badge/CONCEPT-Shallow_Copy_Issue-red?style=for-the-badge)
 ![Concept](https://img.shields.io/badge/CONCEPT-Deep_Copy_Safe-brightgreen?style=for-the-badge)
-![Concept](https://img.shields.io/badge/CONCEPT-Data_Integrity-orange?style=for-the-badge)
-![Concept](https://img.shields.io/badge/CONCEPT-Data_Drift-green?style=for-the-badge)
 
 ---
 
