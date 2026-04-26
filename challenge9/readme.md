@@ -1,61 +1,103 @@
-
 # 🧠 Smart Inventory Mutation Tracker
 
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=4A00E0,8E2DE2&height=200&section=header&text=Inventory%20Mutation%20Analysis&fontSize=35&fontColor=ffffff&animation=fadeIn" />
+</p>
+
 ---
 
-## 📖 Problem Understanding
-This project analyzes how inventory data stored as nested dictionaries behaves when copied using shallow copy and deep copy. Modifications like price and stock updates are applied only to copied data, and the program checks whether these changes affect the original data. This helps in understanding data consistency and copy behavior.
+## 📖 Problem Statement
+A warehouse system maintains inventory using nested dictionaries.  
+This project analyzes how data behaves when copied using:
+
+- Shallow Copy  
+- Deep Copy  
+
+Mutations are applied and the system checks whether the original data is affected.
 
 ---
 
-## ⚙️ Logic / Approach Used
-- Create inventory using nested dictionaries  
-- Generate shallow and deep copies  
-- Apply mutation based on roll number  
-- Compare original and modified data  
-- Analyze which copy affects original  
+## ⚙️ Requirements Covered
+
+✔ Functions used (create_inventory, apply_discount, compare_data)  
+✔ Shallow copy & Deep copy  
+✔ Roll-number-based mutation  
+✔ Nested dictionary handling  
+✔ Comparison logic  
+✔ Output summary  
 
 ---
 
 ## 🎯 Personalization Applied
-- **Roll Number:** 24110011640  
-- **Formula:** `roll_number % len(data)`  
-- **Result:** Index `1` (Phone item modified)  
+
+Roll Number: 24110011640  
+
+Length = 2  
+24110011640 % 2 = 0  
+
+➡️ Modify only index 0 (Laptop)  
 
 ---
 
-## 🧪 Test Case Verification
-- Shallow copy → original data changed ❌  
-- Deep copy → original data unchanged ✅  
-- Confirms correct detection of copy behavior  
+## 🧠 Logic Explanation
+
+Shallow copy creates a new outer structure but shares inner dictionaries.  
+So changes affect original.
+
+Deep copy creates a completely independent structure.  
+So changes do NOT affect original.
 
 ---
 
-## 🔍 Analysis
+## 🔍 Output (Expected)
 
-### Which copy affected original?
-➡️ Shallow Copy  
+Original Inventory:
+Laptop → changed (45000, 7, rating 4.0) ❌  
+Phone → unchanged  
 
-### Which remained independent?
-➡️ Deep Copy  
+Shallow Copy:
+Same as original → proves shared data  
 
-### Why behavior differs?
-Shallow copy shares nested references, so changes affect original data.  
-Deep copy creates independent objects, so original remains unchanged.  
-
----
-
-## 📊 Example Insight
-- Modifying shallow copy → original also changes  
-- Modifying deep copy → original stays same  
+Deep Copy:
+Laptop changed  
+Original remains same → proves independence  
 
 ---
 
-## 📘 Learning Outcome
-I learned the difference between shallow and deep copy in nested data structures. I understood how shallow copy can unintentionally modify original data, while deep copy ensures safe and independent data handling. I also improved my understanding of Python functions and data comparison.
+## 📊 Differences Observed
+
+🔴 Shallow Copy  
+Original also changed ❌  
+Reason: inner dictionary shared  
+
+🟢 Deep Copy  
+Original not affected ✅  
+Reason: fully independent copy  
+
+---
+
+## 📈 Tuple Summary
+
+Shallow → (1, 1)  
+Deep → (1, 1)  
+
+---
+
+## 💡 Final Insight
+
+Shallow copy causes data corruption in nested structures.  
+Deep copy ensures safe and independent data handling.
+
+---
+
+## 🎯 Conclusion
+
+This project shows why deep copy is essential in real-world systems where data integrity matters.
 
 ---
 
 ## 🚀 How to Run
+
 ```bash
 python inventory_tracker.py
+```
